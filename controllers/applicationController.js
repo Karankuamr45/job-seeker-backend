@@ -109,7 +109,7 @@ export const postApplication=catchAsyncError(async(req,res,next)=>{
     }
 
     const jobDetails=await Job.findById(jobId);
-    console.log("jobDetals",jobDetails)
+    // console.log("jobDetals",jobDetails)
     if(!jobDetails){
         return next(new ErrorHandler("Job not found",404))
     }
